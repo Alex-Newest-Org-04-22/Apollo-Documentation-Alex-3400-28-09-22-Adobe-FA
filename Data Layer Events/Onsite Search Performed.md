@@ -1,0 +1,26 @@
+# Onsite Search Performed
+
+### This event is part of the page load sequence, including virtual page loads in the case of single page apps, and must be pushed between the `Page Load Started` and `Page Load Completed` events.
+
+## Javascript Code
+```js
+window.appEventData = window.appEventData || [];
+appEventData.push({
+  "event": "Onsite Search Performed",
+    "onsiteSearch": {
+        "keyword": {
+            "searchType": "<searchType>"
+        }
+    }
+});
+```
+
+## Variable Definitions
+
+|Path|Type|Description|Example|Pattern|Min Length|Max Length|Minimum|Maximum|Multiple Of|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|onsiteSearch.keyword.searchType|string|Describes the domain of the search. |products, properties, articles, authors, coupons, publications|||||||
+
+
+
+
